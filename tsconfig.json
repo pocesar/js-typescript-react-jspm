@@ -1,6 +1,7 @@
 {
   "extends": "./base.json",
   "compilerOptions": {
-    "outFile": "dist/app.js"
+    "outFile": "dist/app.js",
+    "declaration": false
   }
 }

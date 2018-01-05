@@ -24,7 +24,9 @@ Boilerplate for personal use, someone might find it useful with Typescript + Rea
 * `npm install`
 * Hack around, you should edit your `_index.html`, not your `index.html` then:
   * `npm run vendor:build` to build your vendor separated from your main project (should be done once usually) in `dist/vendor.js`
-  * `npm run ts:watch` for TS watching during dev
+  * `npm run ts:build` one-time SystemJS to `dist/app.js`
+  * `npm run ts:dev` one-time modular SystemJS to `lib`
+  * `npm run ts:watch` for TS watching during dev to `lib`
   * `npm run build` will make a release out of your sources (actually execute the more "advanced" Gulp task that calls `npm run build:release`)
   * `npm run test:build` will build your TS test sources
   * `npm test` jest test it
@@ -33,6 +35,10 @@ Boilerplate for personal use, someone might find it useful with Typescript + Rea
   * `npm run sass:watch` for SASS watching
 * ...
 * Profit!
+
+## Caveats
+
+Every module you install using JSPM you need to install using NPM and vice-versa (for tests to work)
 
 ## LICENSE
 

@@ -1,3 +1,4 @@
+import 'open-sans-fontface/open-sans.css!'
 import 'styles/styles.css!'
 import 'whatwg-fetch'
 import React from 'react'

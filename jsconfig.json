@@ -13,5 +13,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUnusedParameters": true,
     "noUnusedLocals": true
-  }
+  },
+  "exclude": [
+    "./jspm_packages",
+    "./node_modules",
+    "./coverage",
+    "./dist"
+  ]
 }

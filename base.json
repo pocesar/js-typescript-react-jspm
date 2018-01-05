@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "system",                     
+    "module": "system",
     "jsx": "react",
     "sourceMap": true,
     "newLine": "lf",
@@ -11,9 +11,11 @@
     "strict": true,
     "noImplicitAny": true,
     "strictFunctionTypes": false,
+    "allowSyntheticDefaultImports": true,
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noEmitOnError": true,
+    "declaration": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "baseUrl": "./",
@@ -26,8 +28,7 @@
       "dom",
       "es2015",
       "es5"
-    ],
-    "allowSyntheticDefaultImports": true
+    ]
   },
   "exclude": [
     "./node_modules",
@@ -35,10 +36,13 @@
     "./dist"
   ],
   "include": [
-    "./generic.d.ts",
     "src/*.ts",
     "src/*.tsx",
     "src/**/*.tsx",
     "src/**/*.ts"
+  ],
+  "files": [
+    "types/generic.d.ts",
+    "types/redux-persist.d.ts"
   ]
 }
