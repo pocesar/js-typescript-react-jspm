@@ -1,7 +1,7 @@
 
 import React from 'react'
 import renderer from 'react-test-renderer'
-import HelloWorld from '../lib/components/hello-world'
+import { HelloWorld } from '../lib/components/hello-world'
 
 const HWAN: any = HelloWorld
 

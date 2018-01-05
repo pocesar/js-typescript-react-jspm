@@ -7,7 +7,7 @@ export interface Props extends RouteComponentProps<any>, DispatchProp<RActions.S
   add: number
 }
 
-class HelloWorld extends React.Component<Props, any> {
+export class HelloWorld extends React.Component<Props, any> {
   add = () => {
     this.props.dispatch!(RActions.Add())
   }
