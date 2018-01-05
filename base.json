@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "system",                     
+    "jsx": "react",
+    "sourceMap": true,
+    "newLine": "lf",
+    "allowJs": false,
+    "outDir": "lib/",
+    "rootDir": "./src",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictFunctionTypes": false,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": [
+        "node_modules/@types/*"
+      ]
+    },
+    "lib": [
+      "dom",
+      "es2015",
+      "es5"
+    ],
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": [
+    "./node_modules",
+    "./jspm_packages",
+    "./dist"
+  ],
+  "include": [
+    "./generic.d.ts",
+    "src/*.ts",
+    "src/*.tsx",
+    "src/**/*.tsx",
+    "src/**/*.ts"
+  ]
+}

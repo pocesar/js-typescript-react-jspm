@@ -1,0 +1,163 @@
+{
+  "name": "typescript-react-jspm",
+  "version": "1.0.0",
+  "description":
+    "Boilerplate for personal use, someone might find it useful with Typescript + React + JSPM (plus some gulp helpers as work arounds)",
+  "main": "dist/app.js",
+  "scripts": {
+    "test": "npm run build:test && jest",
+    "snapshot": "jest -u",
+    "serve": "serve -c 0 -u",
+    "vendor:build":
+      "tsc -p vendor.json && jspm bundle --dev lib/index.js - [lib/**/*.js] - styles/styles.css! dist/vendor.js",
+    "build:test": "tsc -p test.json",
+    "sass:build": "node-sass --error-bell --source-map -o . styles",
+    "sass:watch": "node-sass --error-bell --source-map -o . -w styles/styles.scss",
+    "ts:watch": "npm run vendor && tsc -p tsconfig.json -w",
+    "build": "gulp build",
+    "build:release": "jspm bundle --minify lib/index.js dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pocesar/js-typescript-react-jspm.git"
+  },
+  "keywords": ["react", "typescript", "jspm", "boilerplate"],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pocesar/js-typescript-react-jspm/issues"
+  },
+  "homepage": "https://github.com/pocesar/js-typescript-react-jspm#readme",
+  "devDependencies": {
+    "@types/jest": "^22.0.0",
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-test-renderer": "^16.0.0",
+    "@types/gulp": "^4.0.5",
+    "@types/gulp-copy": "^0.0.4",
+    "@types/gulp-replace": "^0.0.31",
+    "@types/gulp-typescript": "^2.13.0",
+    "@types/gulp-rename": "^0.0.33",
+    "@types/merge-stream": "^1.1.0",
+    "@types/redux-actions": "^2.2.3",
+    "@types/react-router-redux": "^5.0.11",
+    "@types/react-router-dom": "^4.2.3",
+    "@types/react-router": "^4.0.20",
+    "@types/react-redux": "^5.0.14",
+    "@types/prop-types": "^15.5.2",
+    "@types/lodash": "^4.14.91",
+    "@types/bluebird": "^3.5.19",
+    "@types/classnames": "^2.2.3",
+    "@types/history": "^4.6.2",
+    "gulp-copy": "^1.0.1",
+    "gulp-replace": "^0.6.1",
+    "gulp-rev-append": "^0.1.8",
+    "gulp-typescript": "^3.2.3",
+    "gulp-rename": "^1.2.2",
+    "merge-stream": "^1.0.1",
+    "gulp-using": "^0.1.1",
+    "gulp-sequence": "^1.0.0",
+    "serve": "^6.4.3",
+    "bootstrap": "^3.3.7",
+    "babel-jest": "^22.0.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "jest": "^22.0.4",
+    "react-test-renderer": "^16.2.0",
+    "typescript": "^2.6.2",
+    "jspm": "^0.17.0-beta.47",
+    "gulp": "^3.9.1"
+  },
+  "jest": {
+    "preset": "react",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "lib/index.js"
+    ]
+  },
+  "jspm": {
+    "name": "typescript-react-jspm",
+    "main": "lib/index.js",
+    "dependencies": {
+      "open-sans-fontface": "github:FontFaceKit/open-sans@^1.4.2",
+      "css": "github:systemjs/plugin-css@^0.1.32",
+      "classnames": "npm:classnames@^2.2.5",
+      "bootstrap": "github:twbs/bootstrap#v4.0.0-beta.3",
+      "react-router-redux": "npm:react-router-redux@^5.0.0-alpha.9",
+      "react-redux": "npm:react-redux@^5.0.6",
+      "react-router": "npm:react-router@^4.2.0",
+      "react-router-dom": "npm:react-router-dom@^4.2.2",
+      "redux-actions": "npm:redux-actions@^2.2.1",
+      "redux-persist": "npm:redux-persist@^5.4.0",
+      "whatwg-fetch": "npm:whatwg-fetch@^2.0.3",
+      "history": "npm:history@^4.7.2",
+      "lodash": "npm:lodash@^4.17.4",
+      "bluebird": "npm:bluebird@^3.5.1",
+      "react": "npm:react@^16.2.0",
+      "react-dom": "npm:react-dom@^16.2.0",
+      "redux": "npm:redux@^3.7.2"
+    },
+    "devDependencies": {},
+    "peerDependencies": {
+      "assert": "npm:jspm-nodelibs-assert@^0.2.1",
+      "buffer": "npm:jspm-nodelibs-buffer@^0.2.3",
+      "child_process": "npm:jspm-nodelibs-child_process@^0.2.1",
+      "constants": "npm:jspm-nodelibs-constants@^0.2.1",
+      "crypto": "npm:jspm-nodelibs-crypto@^0.2.1",
+      "domain": "npm:jspm-nodelibs-domain@^0.2.1",
+      "events": "npm:jspm-nodelibs-events@^0.2.2",
+      "fs": "npm:jspm-nodelibs-fs@^0.2.1",
+      "http": "npm:jspm-nodelibs-http@^0.2.0",
+      "https": "npm:jspm-nodelibs-https@^0.2.2",
+      "os": "npm:jspm-nodelibs-os@^0.2.2",
+      "path": "npm:jspm-nodelibs-path@^0.2.3",
+      "process": "npm:jspm-nodelibs-process@^0.2.1",
+      "react": "npm:react@^16.2.0",
+      "stream": "npm:jspm-nodelibs-stream@^0.2.1",
+      "string_decoder": "npm:jspm-nodelibs-string_decoder@^0.2.2",
+      "url": "npm:jspm-nodelibs-url@^0.2.1",
+      "util": "npm:jspm-nodelibs-util@^0.2.2",
+      "vm": "npm:jspm-nodelibs-vm@^0.2.1",
+      "zlib": "npm:jspm-nodelibs-zlib@^0.2.3"
+    },
+    "overrides": {
+      "github:FontFaceKit/open-sans@1.4.2": {
+        "dependencies": {}
+      },
+      "npm:bluebird@3.5.1": {
+        "meta": {
+          "js/browser/bluebird.js": {
+            "format": "global"
+          },
+          "js/browser/bluebird.min.js": {
+            "format": "global"
+          }
+        }
+      },
+      "npm:browserify-zlib@0.1.4": {
+        "dependencies": {
+          "readable-stream": "^2.0.2",
+          "pako": "~0.2.0"
+        },
+        "map": {
+          "_stream_transform": "readable-stream/transform"
+        }
+      },
+      "npm:redux-persist@5.4.0": {
+        "map": {
+          "./storages": "./lib/defaultStorages",
+          "./constants": "./lib/constants"
+        }
+      },
+      "npm:inherits@2.0.3": {
+        "ignore": ["test.js"]
+      },
+      "npm:pbkdf2@3.0.14": {
+        "main": "browser.js"
+      },
+      "npm:safe-buffer@5.1.1": {
+        "browser": "index.js"
+      }
+    }
+  }
+}

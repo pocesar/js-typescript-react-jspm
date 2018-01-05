@@ -1,0 +1,10 @@
+{
+  "extends": "./base.json",
+  "compilerOptions": {
+    "outDir": "."
+  },
+  "include": [
+    "./generic.d.ts",
+    "test/*.ts*"
+  ]
+}

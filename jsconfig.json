@@ -1,0 +1,17 @@
+{
+  "typeAcquisition": {
+    "enable": true
+  },
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "checkJs": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "target": "es2015",
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true
+  }
+}
