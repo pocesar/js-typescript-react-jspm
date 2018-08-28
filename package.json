@@ -71,7 +71,7 @@
     "react": "^16.2.0",
     "react-test-renderer": "^16.2.0",
     "redux-persist": "^5.4.0",
-    "serve": "^6.4.3",
+    "serve": "^7.0.0",
     "typescript": "^2.6.2"
   },
   "jest": {
